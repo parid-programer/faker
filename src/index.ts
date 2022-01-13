@@ -19,6 +19,7 @@ import { Random } from './random';
 import { System } from './system';
 import { Time } from './time';
 import { Unique } from './unique';
+import { Vehicle } from './vehicle';
 import { Word } from './word';
 
 export interface FakerOptions {
@@ -199,7 +200,7 @@ export class Faker {
   readonly phone: Phone = new Phone(this);
   readonly system: System = new System(this);
   readonly time: Time = new Time();
-  readonly vehicle = new (require('./vehicle'))(this);
+  readonly vehicle: Vehicle = new Vehicle(this);
   readonly word: Word = new Word(this);
 
   constructor(opts: FakerOptions = {}) {
